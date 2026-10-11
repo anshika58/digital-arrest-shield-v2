@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Arrest Shield</title>
+    <link rel="stylesheet" href="style.css">
+ 
+    <!-- Screenshot OCR -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+ 
+<body>
+ 
+<header class="navbar">
+    <div class="logo">🛡️ Digital Arrest Shield</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#checker">Scam Checker</a>
+        <a href="#tools">Analyzer</a>
+        <a href="#simulator">Simulator</a>
+        <a href="#awareness">Awareness</a>
+    </nav>
+</header>
+ 
+ 
+<!-- ================= HERO ================= -->
+ 
+<section class="hero" id="home">
+ 
+    <div class="hero-content">
+        <p class="tagline">CYBERSECURITY • AWARENESS • PROTECTION</p>
+ 
+        <h1>
+            Don't Let Fear<br>
+            <span>Control You.</span>
+        </h1>
+ 
+        <p class="description">
+            Detect suspicious digital-arrest scam indicators
+            from calls, video calls, messages and screenshots.
+        </p>
+ 
+        <div class="hero-buttons">
+            <a href="#checker" class="primary-btn">🔍 Check Suspicious Interaction</a>
+            <a href="#tools" class="secondary-btn">Analyze Message / Screenshot →</a>
+        </div>
+    </div>
+ 
+    <div class="security-card">
+        <div class="shield">🛡️</div>
+        <h3>Your Safety Matters</h3>
+        <p>
+            Scammers may use fear, authority and urgency
+            to manipulate people.
+        </p>
+        <div class="status">
+            <span class="dot"></span>
+            Stay Alert
+        </div>
+    </div>
+ 
+</section>
+ 
+ 
+<!-- ================= ABOUT ================= -->
+ 
+<section class="about" id="about">
+ 
+    <p class="section-label">WHAT IS DIGITAL ARREST?</p>
+ 
+    <h2>
+        Recognize the signs.<br>
+        Respond with confidence.
+    </h2>
+ 
+    <p class="about-text">
+        Digital-arrest scams involve criminals impersonating
+        police officers, CBI officials, cyber-crime officials,
+        banks or other authorities and using fear or urgency
+        to pressure people.
+    </p>
+ 
+</section>
+ 
+ 
+<!-- ================= FEATURES ================= -->
+ 
+<section class="features">
+ 
+    <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3>Detect</h3>
+        <p>Identify suspicious patterns and warning signs.</p>
+    </div>
+ 
+    <div class="feature-card">
+        <div class="feature-icon">⚠️</div>
+        <h3>Understand</h3>
+        <p>See which scam indicators were detected.</p>
+    </div>
+ 
+    <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>Respond</h3>
+        <p>Learn practical steps for safer handling.</p>
+    </div>
+ 
+</section>
+ 
+ 
+<!-- ================= SCAM CHECKER ================= -->
+ 
+<section class="checker" id="checker">
+ 
+    <div class="checker-heading">
+        <p class="section-label">SCAM CHECKER</p>
+        <h2>Check a suspicious interaction</h2>
+        <p>
+            Answer all eight questions.
+            The answers will be checked by the FastAPI backend.
+        </p>
+    </div>
+ 
+    <div class="checker-box">
+ 
+        <!-- Q1 -->
+        <div class="question" data-key="caller_claim">
+            <h3>1. Who did the caller claim to be?</h3>
+            <div class="options">
+                <button type="button" data-value="Police Officer">Police Officer</button>
+                <button type="button" data-value="CBI Officer">CBI Officer</button>
+                <button type="button" data-value="Bank Official">Bank Official</button>
+                <button type="button" data-value="Other Authority">Other Authority</button>
+            </div>
+        </div>
+ 
+        <!-- Q2 -->
+        <div class="question" data-key="threatened_arrest">
+            <h3>2. Did the caller threaten you with arrest?</h3>
+            <div class="options">
+                <button type="button" data-value="true">Yes</button>
+                <button type="button" data-value="false">No</button>
+            </div>
+        </div>
+ 
+        <!-- Q3 -->
+        <div class="question" data-key="demanded_money">
+            <h3>3. Did they demand money or payment?</h3>
+            <div class="options">
+                <button type="button" data-value="true">Yes</button>
+                <button type="button" data-value="false">No</button>
+            </div>
+        </div>
+ 
+        <!-- Q4 -->
+        <div class="question" data-key="asked_otp_bank">
+            <h3>4. Did they ask for OTP, bank details or sensitive information?</h3>
+            <div class="options">
+                <button type="button" data-value="true">Yes</button>
+                <button type="button" data-value="false">No</button>
+            </div>
+        </div>
+ 
+        <!-- Q5 -->
+        <div class="question" data-key="forced_video_call">
+            <h3>5. Did they force you to stay on a video call?</h3>
+            <div class="options">
+                <button type="button" data-value="true">Yes</button>
+                <button type="button" data-value="false">No</button>
+            </div>
+        </div>
+ 
+        <!-- Q6 -->
+        <div class="question" data-key="created_urgency">
+            <h3>6. Did they create urgency or tell you not to disconnect?</h3>
+            <div class="options">
+                <button type="button" data-value="true">Yes</button>
+                <button type="button" data-value="false">No</button>
+            </div>
+        </div>
+ 
+        <!-- Q7 -->
+        <div class="question" data-key="asked_install_app">
+            <h3>7. Did they ask you to install an unknown app?</h3>
+            <div class="options">
+                <button type="button" data-value="true">Yes</button>
+                <button type="button" data-value="false">No</button>
+            </div>
+        </div>
+ 
+        <!-- Q8 -->
+        <div class="question" data-key="claimed_authority">
+            <h3>8. Did they claim to represent an official authority?</h3>
+            <div class="options">
+                <button type="button" data-value="true">Yes</button>
+                <button type="button" data-value="false">No</button>
+            </div>
+        </div>
+ 
+        <button type="button" id="analyzeBtn" class="analyze-btn">
+            🔍 Analyze Interaction
+        </button>
+ 
+        <div id="result" class="result"></div>
+ 
+    </div>
+ 
+ 
+    <!-- Emergency -->
+ 
+    <div class="emergency-help">
+ 
+        <div class="emergency-icon">🚨</div>
+ 
+        <h3>Are you being pressured or manipulated?</h3>
+ 
+        <p>
+            Stay calm. End the suspicious interaction
+            and seek help through an official channel.
+        </p>
+ 
+        <div class="helpline-box">
+            <span>Cyber Crime Helpline</span>
+            <strong>1930</strong>
+        </div>
+ 
+        <div class="emergency-buttons">
+            <a href="tel:1930" class="call-btn">📞 Call 1930</a>
+            <a href="https://www.cybercrime.gov.in/" target="_blank" class="report-btn">🌐 Report Online</a>
+        </div>
+ 
+    </div>
+ 
+</section>
+ 
+ 
+<!-- ================= MESSAGE + SCREENSHOT ================= -->
+ 
+<section class="tools" id="tools">
+ 
+    <div class="checker-heading">
+        <p class="section-label">INTERACTION ANALYZER</p>
+        <h2>Messages &amp; Screenshots</h2>
+        <p>
+            Analyze suspicious WhatsApp/SMS text
+            or upload a screenshot.
+        </p>
+    </div>
+ 
+    <div class="tool-grid">
+ 
+        <!-- MESSAGE -->
+ 
+        <div class="tool-card">
+ 
+            <div class="tool-icon">💬</div>
+ 
+            <h3>WhatsApp / SMS Analyzer</h3>
+ 
+            <p>
+                Paste a suspicious message and
+                check common scam indicators.
+            </p>
+ 
+            <textarea id="messageInput" placeholder="Paste suspicious WhatsApp/SMS message here..."></textarea>
+ 
+            <!-- FIXED: unique ids (analyzeMessageBtn / messageResult) -->
+            <button type="button" id="analyzeMessageBtn" class="analyze-btn">
+                🔍 Analyze Message
+            </button>
+ 
+            <div id="messageResult" class="tool-result"></div>
+ 
+        </div>
+ 
+ 
+        <!-- SCREENSHOT -->
+ 
+        <div class="tool-card">
+ 
+            <div class="tool-icon">📸</div>
+ 
+            <h3>Screenshot Analyzer</h3>
+ 
+            <p>
+                Upload a suspicious chat screenshot.
+                OCR will read visible text.
+            </p>
+ 
+            <input type="file" id="screenshotInput" accept="image/*">
+ 
+            <div id="screenshotPreview" class="screenshot-preview"></div>
+ 
+            <button type="button" id="analyzeScreenshotBtn" class="tool-btn">
+                📸 Analyze Screenshot
+            </button>
+ 
+            <div id="screenshotResult" class="tool-result"></div>
+ 
+        </div>
+ 
+    </div>
+ 
+</section>
+ 
+ 
+<!-- ================= VOICE ANALYZER (added) ================= -->
+
+<section class="tools" id="voice">
+
+    <div class="checker-heading">
+        <p class="section-label">VOICE ANALYZER</p>
+        <h2>Voice Notes &amp; Calls</h2>
+        <p>
+            Speak, upload a voice note, or paste what the caller said.
+            Speech is converted to text and checked for scam language.
+        </p>
+    </div>
+
+    <div class="tool-grid">
+
+        <!-- INPUT -->
+
+        <div class="tool-card">
+
+            <div class="tool-icon">🎤</div>
+
+            <h3>Speak or Upload</h3>
+
+            <p>
+                Use the microphone, or upload a WhatsApp voice note
+                (.ogg, .opus, .mp3, .wav).
+            </p>
+
+            <label class="voice-label" for="voiceLangSelect">Language you will speak</label>
+            <select id="voiceLangSelect" class="voice-select notranslate" translate="no"></select>
+
+            <div class="voice-row">
+                <button type="button" id="voiceMicBtn" class="voice-btn">🎤 Start Listening</button>
+                <button type="button" id="voiceStopBtn" class="voice-btn" disabled>⏹ Stop</button>
+            </div>
+
+            <label class="voice-label" for="voiceFileInput">🎧 Upload voice note</label>
+            <input type="file" id="voiceFileInput" accept="audio/*,.opus,.ogg,.mp3,.wav,.m4a">
+
+            <p id="voiceStatus" class="voice-status"></p>
+
+            <p class="voice-note">
+                This checks what is said (scam language). It cannot prove
+                whether a voice is AI-cloned.
+            </p>
+
+        </div>
+
+
+        <!-- TRANSCRIPT + RESULT -->
+
+        <div class="tool-card">
+
+            <div class="tool-icon">📝</div>
+
+            <h3>Transcript</h3>
+
+            <p>
+                The text appears here. You can edit it before analyzing.
+            </p>
+
+            <textarea id="voiceTranscript" placeholder="Transcript of the voice note / call..."></textarea>
+
+            <button type="button" id="analyzeVoiceBtn" class="analyze-btn">
+                🔍 Analyze Voice
+            </button>
+
+            <div id="voiceResult" class="tool-result"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= VIDEO CALL ================= -->
+ 
+<section class="simulator" id="simulator">
+ 
+    <div class="simulator-heading">
+        <p class="section-label">VIDEO CALL SCAM SIMULATOR</p>
+        <h2>Experience the pressure step by step</h2>
+        <p>
+            This is a fictional awareness simulation,
+            not a real call.
+        </p>
+    </div>
+ 
+    <div class="simulator-box">
+ 
+        <div class="simulator-header">
+            <span>📹 Incoming Video Call</span>
+            <span class="call-status">● SIMULATION</span>
+        </div>
+ 
+        <div class="video-screen">
+            <div class="caller-avatar">👮</div>
+            <h3>Cyber Crime Department</h3>
+            <p>Caller claims to be an official.</p>
+            <span class="simulation-badge">AWARENESS SIMULATION</span>
+        </div>
+ 
+        <!-- FIXED: first caller message removed (script.js adds it itself) -->
+        <div id="sim-conversation" class="sim-conversation"></div>
+ 
+        <div class="sim-choices">
+ 
+            <p class="choice-title">What will you do?</p>
+ 
+            <div id="sim-options">
+                <button type="button" class="sim-choice" data-choice="continue">Continue the call</button>
+                <button type="button" class="sim-choice" data-choice="verify">Ask for official verification</button>
+                <button type="button" class="sim-choice" data-choice="end">End the call</button>
+            </div>
+ 
+        </div>
+ 
+        <div id="sim-result" class="sim-result"></div>
+ 
+        <button type="button" id="restart-simulator" class="restart-btn">
+            🔄 Restart Simulation
+        </button>
+ 
+    </div>
+ 
+</section>
+ 
+ 
+<!-- ================= AWARENESS ================= -->
+ 
+<section class="awareness" id="awareness">
+ 
+    <div>
+        <p class="section-label">REMEMBER</p>
+ 
+        <h2>
+            Fear is a scammer's<br>
+            strongest weapon.
+        </h2>
+ 
+        <p>
+            Stay calm. Don't share sensitive information.
+            Verify independently before taking action.
+        </p>
+    </div>
+ 
+    <div class="warning-box">
+        <h3>🚩 Common Red Flags</h3>
+        <ul>
+            <li>Threat of immediate arrest</li>
+            <li>Impersonation of authorities</li>
+            <li>Demand for money</li>
+            <li>Requests for OTP or bank details</li>
+            <li>Forced video call</li>
+            <li>Unknown app installation</li>
+            <li>Pressure to act immediately</li>
+        </ul>
+    </div>
+ 
+</section>
+ 
+ 
+<footer>
+    <h3>🛡️ Digital Arrest Shield</h3>
+    <p>A cybersecurity awareness and response project.</p>
+    <p class="copyright">© 2026 Digital Arrest Shield</p>
+</footer>
+ 
+ 
+<script src="script.js"></script>
+<script src="language.js"></script>
+<script src="voice.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+
+# Local database
+*.db
+
+# Environment variables
+.env
+
+# Uvicorn / temporary files
+uvicorn
+
+
+
+
+
